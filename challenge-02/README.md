@@ -22,13 +22,13 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-function add() {
+function addValue() {
     myVar = 43;
     return `O valor da variável agora é ${myVar}`;
 }
 
 // Invoque a função criada acima.
-add(myVar);
+addValue();
 
 // Qual o retorno da função? (Use comentários de bloco).
 /* 'O valor da variável agora é 43' */
@@ -42,7 +42,7 @@ Crie uma função com as seguintes características:
 */
 function myFunction(x, y, z) {
     if(x !== undefined && y !== undefined && z !== undefined) {
-        return (x + y + z) * 3 + 2;
+        return (x * y * z) + 2;
     } else {
         return 'Preencha todos os valores corretamente!';
     }
@@ -69,7 +69,7 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-function myFunction2(x, y, z) {
+function threeArgs(x, y, z) {
   if (x !== undefined && y !== undefined && z !== undefined) {
     return (x + y) / z;
   } else if (x === undefined && y === undefined && z === undefined) {
@@ -78,18 +78,14 @@ function myFunction2(x, y, z) {
     return x + y;
   } else if (x !== undefined) {
     return x;
-  } else if (y !== undefined) {
-    return y;
-  } else if (z !== undefined) {
-    return z;
   } else {
     return null;
   }
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-myFunction2() // false
-myFunction2(55) // 55
-myFunction2(2, 56) // 58
-myFunction2(14, 3, 10) // 1.7
+threeArgs() // false
+threeArgs(55) // 55
+threeArgs(2, 56) // 58
+threeArgs(14, 3, 10) // 1.7
 ```
