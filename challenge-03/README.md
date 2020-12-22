@@ -17,14 +17,14 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 - `caminhouQuantosMetros` - Number - recebe "zero" por padrão
 */
 var person = {
-  name: 'Eduardo',
-  lastName: 'Fialho',
-  genre: 'Male',
+  name: "Eduardo",
+  lastName: "Fialho",
+  genre: "Male",
   age: 18,
   height: 1.78,
   weight: 94.5,
   walking: false,
-  metersWalked: 0
+  metersWalked: 0,
 };
 
 /*
@@ -32,7 +32,7 @@ Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método dev
 alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
 for chamado.
 */
-person.makeBirthday = function() {
+person.makeBirthday = function () {
   person.age++;
 };
 
@@ -46,7 +46,7 @@ valor dessa propriedade a quantidade passada por parâmetro;
 - Ele deverá modificar o valor da propriedade `andando` para o valor
 booleano que representa "verdadeiro";
 */
-person.walk = function(x) {
+person.walk = function (x) {
   metersWalked += x;
   person.walking = true;
 };
@@ -55,7 +55,7 @@ person.walk = function(x) {
 Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o valor
 da propriedade `andando` para o valor booleano que representa "falso".
 */
-person.stop = function() {
+person.stop = function () {
   person.walking = false;
 };
 
@@ -63,7 +63,7 @@ person.stop = function() {
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
-person.completeName = function() {
+person.completeName = function () {
   return `Olá! Meu nome é ${person.name} ${person.lastName}!`;
 };
 
@@ -71,7 +71,7 @@ person.completeName = function() {
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
-person.showAge = function() {
+person.showAge = function () {
   return `Olá, eu tenho ${person.age} anos!`;
 };
 
@@ -79,7 +79,7 @@ person.showAge = function() {
 Crie um método chamado `mostrarPeso`, que retorne a frase:
 - "Eu peso [PESO]Kg."
 */
-person.showWeight = function() {
+person.showWeight = function () {
   return `Eu peso ${person.weight}kg.`;
 };
 
@@ -87,7 +87,7 @@ person.showWeight = function() {
 Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
-person.showHeight = function() {
+person.showHeight = function () {
   return `Minha altura é ${person.height}m.`;
 };
 
@@ -199,7 +199,8 @@ person.presentation = function () {
     `${genreDifference} ` +
     `${person.name} ${person.lastName}, tenho ${person.age} ` +
     `${agePlural}, ` +
-    `${person.height}, meu peso é ${person.weight} e, só hoje, eu já caminhei ${person.metersWalked} ` + `${meterPlural}!`
+    `${person.height}, meu peso é ${person.weight} e, só hoje, eu já caminhei ${person.metersWalked} ` +
+    `${meterPlural}!`
   );
 };
 
