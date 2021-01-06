@@ -2,7 +2,7 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-var variableAny = ["String", 0, undefined, false, null];
+var variableAny = ["String", 0, function () {}, false, null];
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
@@ -22,24 +22,24 @@ segundo, um número. A função deve retornar o valor de um índice do array que
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-function valueFinder(array, index) {
+function returnArrayValueByIndex(array, index) {
   return array[index];
 }
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-var anotherVar = [true, { a: 1 }, 1, null, ["Array"]];
+var anotherVariable = [true, { a: 1 }, 1, null, ["Array"]];
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-valueFinder(anotherVar, 0);
-valueFinder(anotherVar, 1);
-valueFinder(anotherVar, 2);
-valueFinder(anotherVar, 3);
-valueFinder(anotherVar, 4);
+console.log(returnArrayValueByIndex(anotherVariable, 0));
+console.log(returnArrayValueByIndex(anotherVariable, 1));
+console.log(returnArrayValueByIndex(anotherVariable, 2));
+console.log(returnArrayValueByIndex(anotherVariable, 3));
+console.log(returnArrayValueByIndex(anotherVariable, 4));
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -88,22 +88,14 @@ usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
 var bookName = "Rascal Does Not Dream, Vol. 1";
-console.log(
-  `O livro ${bookName} tem ${
-    book("Rascal Does Not Dream, Vol. 1").quantityPages
-  } páginas!`
-);
+console.log(`O livro ${bookName} tem ${book(bookName).quantityPages} páginas!`);
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-console.log(
-  `O autor do livro ${bookName} é ${
-    book("Rascal Does Not Dream, Vol. 1").author
-  }.`
-);
+console.log(`O autor do livro ${bookName} é ${book(bookName).author}.`);
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
@@ -111,7 +103,5 @@ a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
 console.log(
-  `O livro ${bookName} foi publicado pela editora ${
-    book("Rascal Does Not Dream, Vol. 1").publisher
-  }.`
+  `O livro ${bookName} foi publicado pela editora ${book(bookName).publisher}.`
 );
