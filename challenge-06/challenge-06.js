@@ -39,10 +39,10 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 function showTeamPosition(position) {
-  if (position > 5) {
+  if (position < 1 || position > 5) {
     return "Não temos a informação do time que está nessa posição.";
   }
-  console.log(`O time que está em ${position}º lugar é o ${teams[position]}.`);
+  return `O time que está em ${position}º lugar é o ${teams[position]}.`;
 }
 
 /*
@@ -60,8 +60,7 @@ repetição "while".
 */
 var number = 20;
 while (number <= 30) {
-  console.log(number);
-  number++;
+  console.log(number++);
 }
 
 /*
